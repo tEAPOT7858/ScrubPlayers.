@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2009 Style Website</title>
+    <style>
+        body {
+            font-family: "Comic Sans MS", cursive, sans-serif; /* Replace with your preferred 2009-style font */
+            background-color: #f0f0f0; /* Light background color */
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #3498db; /* Blue background color for the header */
+            color: #fff; /* White text color for the header */
+            text-align: center;
+            padding: 10px;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            background-color: #3498db; /* Blue background color, you can customize it */
+            border: 2px solid #2980b9; /* Darker blue border */
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+        }
+
+        .home-section, .about-section {
+            display: none;
+            text-align: center;
+        }
+
+        .button-section button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>2009 Style Website</h1>
+</div>
+
+<div class="container">
+    <a href="#Home" class="button" onclick="toggleSection('home')">Home</a>
+    <a href="#AboutUs" class="button" onclick="toggleSection('about')">About Us</a>
+    <a href="https://www.example.com" class="button">Visit Example.com</a>
+</div>
+
+<div class="home-section button-section">
+    <a href="https://www.link1.com" class="button">Game Example 1</a>
+    <a href="https://www.link2.com" class="button">Game Example 2</a>
+    <a href="https://www.link3.com" class="button">Game Example 3</a>
+</div>
+
+<div class="about-section button-section">
+    <p>This is the About Us text.</p>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        toggleSection('home'); // Show the home section by default
+    });
+
+    function toggleSection(section) {
+        var homeSection = document.querySelector('.home-section');
+        var aboutSection = document.querySelector('.about-section');
+
+        if (section === 'home') {
+            homeSection.style.display = 'block';
+            aboutSection.style.display = 'none';
+        } else if (section === 'about') {
+            homeSection.style.display = 'none';
+            aboutSection.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
